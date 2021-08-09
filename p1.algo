@@ -1,0 +1,31 @@
+ALGORITHM dot_Product
+ VAR
+vectors = [8, 6, 2],[6, 0, 2], [1, 7, 0], [7, 1, 2], [2, 0 ,8], [9, 3, 0]
+ BEGIN
+ Read(n);
+
+result=0
+  FOR i FROM 0 TO vectors.length-1  DO
+      FOR j FROM i+1 TO vectors.length   DO
+      result:=0
+          dotProduct(vectors[i],Verctors[j],result)
+          IF (result=0) THEN
+          print({vectors[i]} and {vectors[j]} are orthogonal )
+          ELSE
+         print({vectors[i]} and {vectors[j]} are not orthogonal )
+
+          END_IF
+      END_FOR
+  END_FOR
+
+END
+
+   PROCEDURE dotProduct(vc1, vc2, VAR result:Integer){
+         FOR i FROM 0 TO vc1.length-1  DO
+    {
+        result += vc1[i] * vc2[i]
+      }
+  }
+
+
+  END
